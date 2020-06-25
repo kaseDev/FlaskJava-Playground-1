@@ -5,5 +5,4 @@ gateway = JavaGateway()
 
 
 def ask_java():
-    print("I still said something")
     return gateway.entry_point.callMe()
