@@ -1,7 +1,11 @@
 public class EntryPoint {
 
-	public String callMe() {
-		System.out.println("I can be called from Python!");
-		return "Hello user, I came from java!";
+	private Graph graph;
+
+	public EntryPoint() {
+		this.graph = new Graph();
 	}
+
+	/* API to interact with the graph. */
+
 }
