@@ -26,18 +26,18 @@ public class Node {
 	// - add new edge given value and node
 	public void newEdge(Node node, int value) {
 		if (node == this || node == null)
-			return; // invalid attempted operation
+			throw new IllegalArgumentException("This is not a valid edge");
 		if (directedEdges.containsKey(node))
-			return; // invalid attempted operation
+			throw new IllegalArgumentException("There is already an edge between these two nodes");
 		directedEdges.put(node, value);
 	}
 
 	// - remove edge given node
 	public void removeEdge(Node node) {
 		if (node == null)
-			return; // invalid attempted operation
+			throw new IllegalArgumentException("This is not a valid edge");
 		if (!directedEdges.containsKey(node))
-			return; // invalid attempted operation
+			throw new IllegalArgumentException("There is not an edge between these nodes");
 		directedEdges.remove(node);
 	}
 
