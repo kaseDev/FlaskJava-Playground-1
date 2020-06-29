@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 /**
@@ -54,7 +55,9 @@ public class Graph {
 
 
 	// - get all nodes in a sorted list by name
-
+	public Set<Map.Entry<String, Node>> getNodes() {
+		return nodes.entrySet();
+	}
 
 	// - get all nodes in a sorted list by value
 
