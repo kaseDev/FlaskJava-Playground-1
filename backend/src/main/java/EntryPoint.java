@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Map;
 
 public class EntryPoint {
@@ -20,6 +21,10 @@ public class EntryPoint {
 
 	public void setNodeValue(String name, int value) {
 		graph.getNode(name).setValue(value);
+	}
+
+	public void printNode(String name) {
+		System.out.println(name + ": " + graph.getNode(name).getValue());
 	}
 
 	public void printNodes() {
